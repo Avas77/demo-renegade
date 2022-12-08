@@ -1,0 +1,13 @@
+name: Using Custom Action
+on: [push]
+jobs:
+  greet_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet User
+        uses: ./
+        id: hello
+        with:
+          who-to-greet: "Ronaldo"
+      - name: Get the output time
+        run: echo "The time was ${{steps.hello.outputs.time}}"

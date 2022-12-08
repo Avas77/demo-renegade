@@ -1,0 +1,14 @@
+name: Greeting User
+description: 'Greet Someone'
+inputs:
+  who-to-greet:
+    description: 'Person'
+    required: true
+    default: "tesla"
+outputs:
+  time:
+    description: 'The time of greeting'
+runs: 
+  using: 'node16'
+  main: 'index.js'
+     
